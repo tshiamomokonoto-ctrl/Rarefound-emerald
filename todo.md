@@ -62,3 +62,9 @@
 - [x] Replace the first-sale timeline visual with the documented $22.20 sale image.
 - [x] Update related proof labels to accurately identify the first documented sale.
 - [x] Verify the first-sale proof presentation on desktop and mobile.
+
+## Visual Editor Spacing Consolidation
+
+- [x] Inspect the editor-applied inline spacing changes for duplicate props and unintended nested spacing.
+- [x] Retain the requested compact 20px section spacing in clean, valid markup.
+- [x] Verify the compact layout and save a correction checkpoint.
