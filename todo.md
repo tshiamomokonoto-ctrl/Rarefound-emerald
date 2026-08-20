@@ -37,3 +37,10 @@
 - [x] Display the supplied module covers in a concise, responsive course-library gallery.
 - [x] Preserve a clear cover placeholder for Module 04 until its cover image is supplied.
 - [x] Verify the curriculum gallery on desktop and mobile.
+
+## Module 04 and Mobile Collage
+
+- [x] Move the supplied Module 04 cover art to managed static-asset storage.
+- [x] Replace the Module 04 cover placeholder with the provided artwork.
+- [x] Display the course-library modules in a compact two-column collage on mobile.
+- [x] Verify the complete 10-cover library at desktop and mobile sizes.

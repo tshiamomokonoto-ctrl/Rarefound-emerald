@@ -35,7 +35,7 @@ const modules = [
   { no: "01", name: "Choose Your Profitable Direction", outcome: "Find the right niche", cover: "/manus-storage/module-01_a117f0d0.png" },
   { no: "02", name: "Build a Brand People Remember", outcome: "Build the page", cover: "/manus-storage/module-02_4b5499f4.png" },
   { no: "03", name: "Content That Actually Grows", outcome: "Know what to post", cover: "/manus-storage/module-03_cb39dfa2.png" },
-  { no: "04", name: "The AI Content Creation System", outcome: "Create content faster" },
+  { no: "04", name: "The AI Content Creation System", outcome: "Create content faster", cover: "/manus-storage/module-04_00233816.png" },
   { no: "05", name: "Editing Like a Viral Creator", outcome: "Turn ideas into compelling content", cover: "/manus-storage/module-05_39812b2a.jpg" },
   { no: "06", name: "The Growth System", outcome: "Grow the audience", cover: "/manus-storage/module-06_a0e58049.jpg" },
   { no: "07", name: "Build Trust & Authority", outcome: "Turn followers into believers", cover: "/manus-storage/module-07_820b5e5e.jpg" },
