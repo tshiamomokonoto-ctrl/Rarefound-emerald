@@ -1,4 +1,4 @@
-/** Design philosophy: reference-led proof-first editorial landing page with a fixed glass navigation shell. */
+/** Design philosophy: Rarefound proof-first editorial landing page with a fixed glass navigation shell. */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";

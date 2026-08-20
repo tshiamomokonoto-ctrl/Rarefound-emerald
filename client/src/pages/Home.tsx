@@ -1,5 +1,5 @@
 /**
- * Design philosophy: reference-led proof-first editorial sales page.
+ * Design philosophy: Rarefound proof-first editorial sales page.
  * Matte black surfaces, restrained emerald signals, serif display hierarchy,
  * and industrial browser-frame motifs are intentional and must remain cohesive.
  */
@@ -27,7 +27,7 @@ import {
 const heroImage = "/manus-storage/method-hero-grid_e95423d3.png";
 const proofImage = "/manus-storage/method-proof-silhouette_37a5eea6.png";
 const vaultImage = "/manus-storage/method-vault-graph_c189bc11.png";
-const symbolImage = "/manus-storage/method-symbol_8aae80ab.png";
+const rarefoundLogo = "/manus-storage/rarefound-logo_05856966.png";
 
 const modules = [
   {
@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <div className="site-shell">
       <header className="site-nav">
-        <a href="#top" className="wordmark" aria-label="Sell The Method home"><img src={symbolImage} alt="" /> <span>SELLTHEMETHOD</span></a>
+        <a href="#top" className="wordmark rarefound-wordmark" aria-label="Rarefound home"><span className="rarefound-logo-crop"><img src={rarefoundLogo} alt="" /></span><span>RAREFOUND</span></a>
         <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Primary navigation">
           <a href="#proof" onClick={() => setMenuOpen(false)}>Proof</a>
           <a href="#pricing" onClick={() => setMenuOpen(false)}>Access</a>
@@ -187,11 +187,11 @@ export default function Home() {
           <DotGrid className="hero-grid" />
           <div className="constellation constellation-a" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
           <div className="hero-browser">
-            <div className="browser-chrome"><div><i /><i /><i /></div><span>sellthemethod</span><CircleDotDashed size={14} /></div>
+            <div className="browser-chrome"><div><i /><i /><i /></div><span>rarefound</span><CircleDotDashed size={14} /></div>
             <div className="hero-browser__content">
               <div className="hero-copy">
                 <Eyebrow>Digital product operating system</Eyebrow>
-                <h1>Selling The<br />Method Is The<br /><em>Method</em></h1>
+                <h1>Package what<br />you know. Sell<br /><em>while you sleep.</em></h1>
                 <p>Every influencer got rich selling courses, not from the thing they teach. You already knew that.</p>
                 <p className="hero-kicker">Make F*** U Money Selling Courses.</p>
                 <div className="hero-stats">
@@ -249,7 +249,7 @@ export default function Home() {
 
         <section id="modules" className="section-wrap vault-section">
           <div className="vault-intro"><Eyebrow>Inside the vault</Eyebrow><h2>The whole system<br /><em>in one place.</em></h2><p>The method, the offer, and everything you need to sell it.</p></div>
-          <div className="vault-visual"><img src={vaultImage} alt="A visual knowledge graph for the digital course vault" /><div className="vault-visual__overlay"><span>SELLTHEMETHOD / VAULT</span><b>29<br /><small>linked lessons</small></b></div></div>
+          <div className="vault-visual"><img src={vaultImage} alt="A visual knowledge graph for the digital course vault" /><div className="vault-visual__overlay"><span>RAREFOUND / VAULT</span><b>29<br /><small>linked lessons</small></b></div></div>
           <div className="module-heading"><div><Eyebrow>Everything you get</Eyebrow><h2>5 modules.<br />29 lessons.</h2></div><PrimaryButton href="#pricing">Get access</PrimaryButton></div>
           <div className="module-list">{modules.map((module) => <article className="module-row" key={module.no}><span className="module-num">{module.no}</span><div className="module-main"><small>{module.lessons}</small><h3>{module.name}</h3><p>{module.copy}</p></div><span className="module-plan">{module.plan}</span><ArrowUpRight size={18} /></article>)}</div>
         </section>
@@ -261,7 +261,7 @@ export default function Home() {
         <section id="final" className="section-wrap final-section"><DotGrid /><div className="final-content"><Eyebrow>Sell the shovels</Eyebrow><h2>You already have<br />the <em>method.</em></h2><p>The only thing left is the decision to use it.</p><PrimaryButton href="#pricing">Get the method</PrimaryButton><span>The funnel you just scrolled is the method in action.</span></div></section>
       </main>
 
-      <footer className="site-footer"><button onClick={scrollTop} className="footer-mark" aria-label="Back to top"><img src={symbolImage} alt="" /></button><span>SELLTHEMETHOD (C) 2026</span><a href="mailto:support@example.com"><Mail size={14} /> Email</a><a href="#top">Legal</a></footer>
+      <footer className="site-footer"><button onClick={scrollTop} className="footer-mark rarefound-logo-crop" aria-label="Back to top"><img src={rarefoundLogo} alt="" /></button><span>RAREFOUND (C) 2026</span><a href="mailto:support@example.com"><Mail size={14} /> Email</a><a href="#top">Legal</a></footer>
     </div>
   );
 }
