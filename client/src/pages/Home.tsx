@@ -28,6 +28,13 @@ const heroImage = "/manus-storage/method-hero-grid_e95423d3.png";
 const proofImage = "/manus-storage/method-proof-silhouette_37a5eea6.png";
 const vaultImage = "/manus-storage/method-vault-graph_c189bc11.png";
 const rarefoundLogo = "/manus-storage/rarefound-logo_05856966.png";
+const viewsSeptember = "/manus-storage/views-september_89729714.webp";
+const followersProfile = "/manus-storage/followers-profile_12f165d5.webp";
+const salesAnalyticsAnnual = "/manus-storage/sales-analytics-annual_4f8c5275.webp";
+const salesAnalyticsMonth = "/manus-storage/sales-analytics-month_5d6072b7.webp";
+const dmFirstClient = "/manus-storage/dm-first-client_eba049ce.jpg";
+const dmFirstSale = "/manus-storage/dm-first-sale_66ca802e.jpg";
+const dmViewsGrowth = "/manus-storage/dm-views-growth_5f5fd7fe.webp";
 
 const modules = [
   {
@@ -118,12 +125,12 @@ function PrimaryButton({ children, href = "#pricing" }: { children: React.ReactN
   return <a href={href} className="primary-button">{children}<ArrowRight size={16} strokeWidth={2.4} /></a>;
 }
 
-function ProofCard({ type, title, detail, tone = "emerald" }: { type: string; title: string; detail: string; tone?: "emerald" | "muted" }) {
+function ProofCard({ type, title, detail, tone = "emerald", image }: { type: string; title: string; detail: string; tone?: "emerald" | "muted"; image?: string }) {
   return (
-    <article className={`proof-card ${tone}`}>
+    <article className={`proof-card ${tone} ${image ? "evidence" : ""}`}>
       <div className="proof-card__bar"><span>{type}</span><i /></div>
       <div className="proof-card__body">
-        <div className="proof-pulse"><b /><b /><b /></div>
+        {image ? <img className="proof-card__image" src={image} alt="First-party Rarefound proof screenshot" /> : <div className="proof-pulse"><b /><b /><b /></div>}
         <strong>{title}</strong>
         <small>{detail}</small>
       </div>
@@ -200,28 +207,29 @@ export default function Home() {
                 <a className="proof-jump" href="#proof">See the proof <ArrowDown size={16} /></a>
               </div>
               <div className="hero-proof-panel">
-                <img src={proofImage} alt="An anonymous creator working in a low-key workspace" />
+                <img src={viewsSeptember} alt="Instagram views analytics showing 20,353,747 views" />
                 <div className="hero-proof-panel__shade" />
-                <div className="small-card"><div><span className="status-dot" /> STRIPE</div><b>real sales</b></div>
-                <a href="#proof" className="verify-link">Verify the sales live <ExternalLink size={14} /></a>
+                <div className="small-card"><div><span className="status-dot" /> INSTAGRAM</div><b>20.35M views</b></div>
+                <a href="#proof" className="verify-link">See first-party proof <ExternalLink size={14} /></a>
               </div>
             </div>
           </div>
         </section>
 
         <section id="proof" className="section-wrap proof-section">
-          <div className="section-heading split-heading"><div><Eyebrow>The case study · DeployVault</Eyebrow><h2>Proof the method<br /><em>actually moves</em></h2></div><p>DeployVault is the product built and sold with this exact method. It is presented here as a living course of action, not a slide deck.</p></div>
+          <div className="section-heading split-heading"><div><Eyebrow>First-party proof · Rarefound</Eyebrow><h2>Proof the system<br /><em>actually moves</em></h2></div><p>Views, follower growth, sales analytics, and customer messages from the channels and dashboards provided by Rarefound.</p></div>
           <div className="proof-lead">
-            <div className="proof-lead__visual"><div className="scanline" /><div className="proof-led"><span>LIVE</span><b>Evidence<br />in motion</b><small>connected / source-driven</small></div></div>
-            <div className="proof-lead__copy"><Eyebrow>Verified patterns</Eyebrow><h3>Build the product.<br />Build the proof.<br /><em>Then tell the story.</em></h3><a href="#pricing" className="inline-arrow">See the full process <ArrowRight size={17} /></a></div>
+            <div className="proof-lead__visual evidence-lead"><img className="proof-lead__image" src={salesAnalyticsAnnual} alt="Digital product analytics showing 339 orders, 14.9 percent conversion, and 6543.51 dollars in earnings" /><div className="proof-lead__veil" /><div className="proof-led"><span>BEACONS ANALYTICS</span><b>339 orders<br />$6,543.51 earned</b><small>first-party dashboard · last 365 days</small></div></div>
+            <div className="proof-lead__copy"><Eyebrow>Documented results</Eyebrow><h3>Build the product.<br />Document the proof.<br /><em>Then tell the story.</em></h3><a href="#pricing" className="inline-arrow">See the full process <ArrowRight size={17} /></a></div>
           </div>
           <div className="proof-grid">
-            <ProofCard type="STRIPE" title="Sales signal" detail="a live proof frame" />
-            <ProofCard type="STRIPE" title="System working" detail="momentum, not theatre" tone="muted" />
-            <ProofCard type="INSTAGRAM" title="The page" detail="content → demand" tone="muted" />
-            <ProofCard type="INSTAGRAM" title="Attention layer" detail="a repeatable visual hook" />
+            <ProofCard type="INSTAGRAM" title="30K followers" detail="23.6M views in the last 30 days" image={followersProfile} />
+            <ProofCard type="BEACONS" title="129 orders" detail="16.3% conversion in the last 30 days" image={salesAnalyticsMonth} tone="muted" />
+            <ProofCard type="CUSTOMER DM" title="First client signed" detail="a documented win after two days" image={dmFirstClient} tone="muted" />
+            <ProofCard type="CUSTOMER DM" title="First sale confirmed" detail="customer-reported proof shared with Rarefound" image={dmFirstSale} />
           </div>
-          <div className="metrics-strip"><div><b>16+</b><span>members inside</span></div><div><b>$20k+</b><span>sales signal this month</span></div><div><b>75</b><span>customers in week one</span></div><div><b>2 days</b><span>to first client</span></div></div>
+          <div className="metrics-strip"><div><b>20.35M</b><span>views · September</span></div><div><b>30K</b><span>followers</span></div><div><b>339</b><span>orders · last 365 days</span></div><div><b>$6.5K</b><span>earnings · last 365 days</span></div></div>
+          <div className="dm-proof-section"><div><Eyebrow>Customer messages</Eyebrow><p>First-party customer conversations shared as proof of client wins, first sales, and audience growth.</p></div><div className="dm-gallery"><article><img src={dmFirstClient} alt="Customer message reporting their first client signed in two days" /><span>First client · two days</span></article><article><img src={dmFirstSale} alt="Customer message reporting a first sale" /><span>First sale · customer report</span></article><article><img src={dmViewsGrowth} alt="Customer message about receiving 68.5 thousand views" /><span>68.5K views · customer report</span></article></div></div>
         </section>
 
         <section id="pricing" className="section-wrap pricing-section">
