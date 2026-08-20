@@ -9,25 +9,20 @@ import {
   ArrowRight,
   ArrowUpRight,
   Check,
-  ChevronDown,
   CircleDotDashed,
   CreditCard,
   ExternalLink,
   Layers3,
   Mail,
-  Menu,
   Minus,
   Plus,
   ShieldCheck,
-  Sparkles,
-  X,
-  Zap,
 } from "lucide-react";
 
 const heroImage = "/manus-storage/method-hero-grid_e95423d3.png";
-const proofImage = "/manus-storage/method-proof-silhouette_37a5eea6.png";
-const vaultImage = "/manus-storage/method-vault-graph_c189bc11.png";
 const rarefoundLogo = "/manus-storage/rarefound-logo_05856966.png";
+const checkoutUrl = "https://shop.beacons.ai/rarefound/032671fb-9aca-4ff1-b167-450ba7c7f1c0";
+const facelessPageLaunchVisual = "/manus-storage/faceless-page-launch-system_76e323e0.webp";
 const viewsSeptember = "/manus-storage/views-september_89729714.webp";
 const followersProfile = "/manus-storage/followers-profile_12f165d5.webp";
 const salesAnalyticsAnnual = "/manus-storage/sales-analytics-annual_4f8c5275.webp";
@@ -36,43 +31,13 @@ const dmFirstClient = "/manus-storage/dm-first-client_eba049ce.jpg";
 const dmFirstSale = "/manus-storage/dm-first-sale_66ca802e.jpg";
 const dmViewsGrowth = "/manus-storage/dm-views-growth_5f5fd7fe.webp";
 
-const modules = [
-  {
-    no: "01",
-    lessons: "5 lessons",
-    name: "Mindset",
-    plan: "Included in The Method",
-    copy: "The meta, the identity, the 2-day window, and the first win. Why course selling is the actual business.",
-  },
-  {
-    no: "02",
-    lessons: "9 lessons",
-    name: "Operations",
-    plan: "Included in The Method",
-    copy: "The funnel, DMs, objection handling, payments, delivery, and the full backend setup.",
-  },
-  {
-    no: "03",
-    lessons: "5 lessons",
-    name: "Marketing",
-    plan: "Included in The Method",
-    copy: "Positioning, visual hooks, consistency, the content formula, and comments that pull reach.",
-  },
-  {
-    no: "04",
-    lessons: "5 lessons",
-    name: "Pricing",
-    plan: "Included in The Method",
-    copy: "The price ladder, hidden tiers, locked-file upsells, and pricing your proof with intent.",
-  },
-  {
-    no: "05",
-    lessons: "5 lessons",
-    name: "The AI Engine",
-    plan: "Included in The AI Engine",
-    copy: "Use AI to build the vault, the page, and the tools that get the digital product out into the world.",
-  },
-];
+const modules = Array.from({ length: 10 }, (_, index) => ({
+  no: String(index + 1).padStart(2, "0"),
+  lessons: "PDF module + workbook",
+  name: `Module ${String(index + 1).padStart(2, "0")}`,
+  plan: "Faceless Page Launch System",
+  copy: "A focused course module with a companion workbook. Detailed cover pages will be added here as they are released.",
+}));
 
 const faqs = [
   [
@@ -121,8 +86,8 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   return <p className="eyebrow"><span />{children}</p>;
 }
 
-function PrimaryButton({ children, href = "#pricing" }: { children: React.ReactNode; href?: string }) {
-  return <a href={href} className="primary-button">{children}<ArrowRight size={16} strokeWidth={2.4} /></a>;
+function PrimaryButton({ children, href = checkoutUrl }: { children: React.ReactNode; href?: string }) {
+  return <a href={href} className="primary-button" target="_blank" rel="noreferrer">{children}<ArrowRight size={16} strokeWidth={2.4} /></a>;
 }
 
 function ProofCard({ type, title, detail, tone = "emerald", image }: { type: string; title: string; detail: string; tone?: "emerald" | "muted"; image?: string }) {
@@ -139,38 +104,32 @@ function ProofCard({ type, title, detail, tone = "emerald", image }: { type: str
   );
 }
 
-function OfferCard({ engine = false }: { engine?: boolean }) {
-  const [showMore, setShowMore] = useState(false);
-  const items = engine
-    ? ["Everything in The Method", "The site template and visual system", "A delivery-system outline", "AI build prompts and setup guide", "The complete video walkthrough"]
-    : ["The full vault: 4 modules, 24 lessons", "Swipe files for DMs, hooks, and sales copy", "A funnel implementation outline", "Lifetime updates and direct support"];
+function OfferCard() {
+  const items = [
+    "10 PDF modules, each with a companion workbook",
+    "ManyChat automation templates",
+    "A 7-day weekly planner",
+    "25+ AI prompt pack",
+    "1,500+ HD done-for-you clips, ready to edit",
+  ];
 
   return (
-    <article className={`offer-card ${engine ? "featured" : ""}`}>
-      {engine && <div className="popular-flag">Most popular</div>}
-      <div className="offer-card__topline"><span>Level 0{engine ? "2" : "1"}</span><span className="live-tag">Founder pricing live</span></div>
-      <h3>{engine ? "The AI Engine" : "The Method"}</h3>
-      <p className="offer-card__intro">
-        {engine ? "Use AI to shape your vault and your page, then make the infrastructure your own." : "Package what you know into a vault people can buy, without building an audience first."}
-      </p>
-      <div className="price-line"><strong>${engine ? "97" : "47"}</strong><del>${engine ? "179" : "99"}</del></div>
-      <p className="price-note">Prices rise with the next cohort</p>
+    <article className="offer-card featured solo-offer">
+      <div className="course-offer-visual"><img src={facelessPageLaunchVisual} alt="Rarefound The Faceless Page Launch System course and bonus library" /></div>
+      <div className="solo-offer__content"><div className="offer-card__topline"><span>One complete course</span><span className="live-tag">Instant access</span></div>
+      <h3>The Faceless<br />Page Launch System</h3>
+      <p className="offer-card__intro">A complete step-by-step system for building a faceless Instagram page, growing an audience, and turning that attention into money.</p>
       <div className="offer-divider" />
-      <ul className="offer-list">
-        {items.slice(0, showMore ? items.length : 3).map((item) => <li key={item}><Check size={15} />{item}</li>)}
-      </ul>
-      {items.length > 3 && <button className="text-button" onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "See full module breakdown"}<ChevronDown size={14} className={showMore ? "flip" : ""} /></button>}
-      {engine && <div className="value-stack"><p>What this replaces</p><div><span>Custom site & delivery framework</span><b>$500+</b></div><div><span>A productized funnel outline</span><b>$150+</b></div><div><span>Membership subscription overhead</span><b>annual</b></div></div>}
-      <p className="profit-note">One sale of your own course can cover this. Everything after is yours to keep.</p>
-      <PrimaryButton href="#final">{engine ? "Get instant access" : "Get the method"}</PrimaryButton>
-      <p className="checkout-note"><CreditCard size={14} /> Secure checkout · instant access</p>
-      <div className="guarantee"><ShieldCheck size={18} /><p><b>14-day action-based guarantee</b> Complete the modules, launch a real offer, and post consistently. If the process has not served you, show the work.</p></div>
+      <p className="bundle-label">Everything included</p>
+      <ul className="offer-list">{items.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
+      <PrimaryButton>Access now</PrimaryButton>
+      <p className="checkout-note"><CreditCard size={14} /> Secure checkout via Beacons · instant access</p>
+      <div className="guarantee"><ShieldCheck size={18} /><p><b>One complete system</b> Course modules, workbooks, templates, planning resources, AI prompts, and editable clip assets are all included with access.</p></div></div>
     </article>
   );
 }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -178,14 +137,14 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-nav">
         <a href="#top" className="wordmark rarefound-wordmark" aria-label="Rarefound home"><span className="rarefound-logo-crop"><img src={rarefoundLogo} alt="" /></span><span>RAREFOUND</span></a>
-        <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Primary navigation">
-          <a href="#proof" onClick={() => setMenuOpen(false)}>Proof</a>
-          <a href="#pricing" onClick={() => setMenuOpen(false)}>Access</a>
-          <a href="#modules" onClick={() => setMenuOpen(false)}>Inside the vault</a>
-          <a href="#faq" onClick={() => setMenuOpen(false)}>Questions</a>
+        <nav className="nav-links" aria-label="Primary navigation">
+          <a href="#proof">Proof</a>
+          <a href={checkoutUrl} target="_blank" rel="noreferrer">Access</a>
+          <a href="#modules">Inside the vault</a>
+          <a href="#faq">Questions</a>
         </nav>
-        <a className="nav-cta" href="#pricing">Get the method <ArrowUpRight size={14} /></a>
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
+        <a className="nav-cta" href={checkoutUrl} target="_blank" rel="noreferrer">Access now <ArrowUpRight size={14} /></a>
+        <a className="mobile-access" href={checkoutUrl} target="_blank" rel="noreferrer">Access now <ArrowUpRight size={13} /></a>
       </header>
 
       <main id="top">
@@ -199,14 +158,14 @@ export default function Home() {
               <div className="hero-copy">
                 <Eyebrow>Digital product operating system</Eyebrow>
                 <h1>Package what<br />you know. Sell<br /><em>while you sleep.</em></h1>
-                <p>Every influencer got rich selling courses, not from the thing they teach. You already knew that.</p>
-                <p className="hero-kicker">Make F*** U Money Selling Courses.</p>
+                <p>A complete step-by-step system for building a faceless Instagram page, growing an audience, and turning that attention into money.</p>
+                <p className="hero-kicker">Build. Grow. Monetize. Scale.</p>
                 <div className="hero-stats">
-                  <div><b>12+</b><span>students selling</span></div><div><b>$23k+</b><span>made by students</span></div><div><b>10M+</b><span>views with the method</span></div><div><b>100%</b><span>faceless</span></div>
+                  <div><b>339</b><span>orders</span></div><div><b>$6.5K</b><span>earned</span></div><div><b>20.35M</b><span>views</span></div><div><b>30K</b><span>followers</span></div>
                 </div>
                 <a className="proof-jump" href="#proof">See the proof <ArrowDown size={16} /></a>
               </div>
-              <div className="hero-proof-panel">
+              <div className="hero-proof-panel analytics-proof">
                 <img src={viewsSeptember} alt="Instagram views analytics showing 20,353,747 views" />
                 <div className="hero-proof-panel__shade" />
                 <div className="small-card"><div><span className="status-dot" /> INSTAGRAM</div><b>20.35M views</b></div>
@@ -220,7 +179,7 @@ export default function Home() {
           <div className="section-heading split-heading"><div><Eyebrow>First-party proof · Rarefound</Eyebrow><h2>Proof the system<br /><em>actually moves</em></h2></div><p>Views, follower growth, sales analytics, and customer messages from the channels and dashboards provided by Rarefound.</p></div>
           <div className="proof-lead">
             <div className="proof-lead__visual evidence-lead"><img className="proof-lead__image" src={salesAnalyticsAnnual} alt="Digital product analytics showing 339 orders, 14.9 percent conversion, and 6543.51 dollars in earnings" /><div className="proof-lead__veil" /><div className="proof-led"><span>BEACONS ANALYTICS</span><b>339 orders<br />$6,543.51 earned</b><small>first-party dashboard · last 365 days</small></div></div>
-            <div className="proof-lead__copy"><Eyebrow>Documented results</Eyebrow><h3>Build the product.<br />Document the proof.<br /><em>Then tell the story.</em></h3><a href="#pricing" className="inline-arrow">See the full process <ArrowRight size={17} /></a></div>
+            <div className="proof-lead__copy"><Eyebrow>Documented results</Eyebrow><h3>Build the page.<br />Grow the audience.<br /><em>Monetize attention.</em></h3><a href={checkoutUrl} className="inline-arrow" target="_blank" rel="noreferrer">Access the system <ArrowRight size={17} /></a></div>
           </div>
           <div className="proof-grid">
             <ProofCard type="INSTAGRAM" title="30K followers" detail="23.6M views in the last 30 days" image={followersProfile} />
@@ -233,13 +192,13 @@ export default function Home() {
         </section>
 
         <section id="pricing" className="section-wrap pricing-section">
-          <div className="section-heading centered-heading"><Eyebrow>Choose your path</Eyebrow><h2>Package what you know.<br /><em>Sell it faceless.</em></h2><p>No camera, no audience. Watchers keep watching. Sellers sell the method.</p></div>
-          <div className="offer-grid"><OfferCard /><OfferCard engine /></div>
-          <p className="licensing-note"><Layers3 size={17} /><span><b>Don't have a niche yet?</b> Licensed vaults are available to members: complete, tested product frameworks you can rebrand and make your own.</span></p>
+          <div className="section-heading centered-heading"><Eyebrow>One complete system</Eyebrow><h2>Build a faceless page.<br /><em>Turn attention into income.</em></h2><p>The Faceless Page Launch System gives you the course, workbooks, and practical assets to move from setup to content to conversion.</p></div>
+          <div className="offer-grid solo-offer-grid"><OfferCard /></div>
+          <p className="licensing-note"><Layers3 size={17} /><span><b>Built for implementation.</b> One complete course, 10 PDF modules with workbooks, plus templates, planners, prompts, and ready-to-edit video assets.</span></p>
         </section>
 
         <section className="section-wrap claim-section">
-          <div className="claim-copy"><Eyebrow>The part nobody says out loud</Eyebrow><h2>You already know<br /><em>selling courses prints.</em></h2><p>What do all of these creators have in common? Every post leads somewhere. Every point of attention becomes a funnel to an offer.</p><p>With an operating system and assisted production, building the thing that teaches people is much more direct than it used to be.</p><PrimaryButton>Start selling the method</PrimaryButton></div>
+          <div className="claim-copy"><Eyebrow>The part nobody says out loud</Eyebrow><h2>You already know<br /><em>attention converts.</em></h2><p>Every post can lead somewhere. The system is about building an audience that knows what to do next.</p><p>With the right operating system, building a faceless page and monetizing it becomes a process you can repeat.</p><PrimaryButton>Access the system</PrimaryButton></div>
           <div className="influence-stack">
             {[['01','The funnel is the product','Attention becomes an asset when it leads to a clear next step.'],['02','The lesson needs a system','The delivery has to be more than a folder of loose advice.'],['03','Ownership compounds','Build your own conversion and delivery infrastructure.']].map(([number,title,copy]) => <article className="influence-card" key={number}><span>{number}</span><div><h3>{title}</h3><p>{copy}</p></div><ArrowUpRight size={19} /></article>)}
           </div>
@@ -247,18 +206,18 @@ export default function Home() {
 
         <section className="section-wrap founder-section">
           <div className="founder-rail"><span>From the founder</span><span>Personal note / 2026</span></div>
-          <div className="founder-letter"><h2>“I spent years procrastinating with every hype, and made nothing.”</h2><div className="letter-body"><p>Then it clicked: the people selling courses on dropshipping and trading were quietly making more than the people actually doing it.</p><p>When a clear system finally replaces scattered tactics, the first product gets easier to build, easier to communicate, and more honest to sell.</p><p>In a gold rush, the people selling shovels make the most. A course is the shovel.</p><p>If that is where you are trying to get, this was built to help.</p><a href="#pricing" className="inline-arrow">Start now <ArrowRight size={17} /></a></div></div>
+          <div className="founder-letter"><h2>“I spent years procrastinating with every hype, and made nothing.”</h2><div className="letter-body"><p>Then it clicked: the people building faceless pages were quietly creating a real audience and turning the attention into a business.</p><p>When a clear system replaces scattered tactics, the page gets easier to build, easier to grow, and more useful to monetize.</p><p>If that is where you are trying to get, this was built to help.</p><a href={checkoutUrl} className="inline-arrow" target="_blank" rel="noreferrer">Access now <ArrowRight size={17} /></a></div></div>
         </section>
 
         <section className="section-wrap timeline-section">
-          <div className="section-heading split-heading"><div><Eyebrow>In real time</Eyebrow><h2>This account is<br /><em>the proof.</em></h2></div><p>A course about selling courses, already selling, faceless, from a standing start. The method stays visible in the work itself.</p></div>
+          <div className="section-heading split-heading"><div><Eyebrow>In real time</Eyebrow><h2>This page is<br /><em>the proof.</em></h2></div><p>A faceless page growing an audience and turning attention into a documented commercial result. The system stays visible in the work itself.</p></div>
           <div className="timeline-layout"><div className="timeline"><article><span>01</span><time>June 20</time><h3>First video posted</h3><p>The account starts from zero.</p></article><article><span>02</span><time>June 27</time><h3>First signal</h3><p>The loop begins to find attention.</p></article><article><span>03</span><time>June 28</time><h3>First sale</h3><p>Real action, not an abstract plan.</p></article></div><div className="timeline-visual"><div className="timeline-visual__orb" /><p>Operate in public.<br /><em>Let the process prove itself.</em></p><div><b>12</b><span>posts</span><b>8 days</b><span>to first sale</span></div></div></div>
         </section>
 
         <section id="modules" className="section-wrap vault-section">
-          <div className="vault-intro"><Eyebrow>Inside the vault</Eyebrow><h2>The whole system<br /><em>in one place.</em></h2><p>The method, the offer, and everything you need to sell it.</p></div>
-          <div className="vault-visual"><img src={vaultImage} alt="A visual knowledge graph for the digital course vault" /><div className="vault-visual__overlay"><span>RAREFOUND / VAULT</span><b>29<br /><small>linked lessons</small></b></div></div>
-          <div className="module-heading"><div><Eyebrow>Everything you get</Eyebrow><h2>5 modules.<br />29 lessons.</h2></div><PrimaryButton href="#pricing">Get access</PrimaryButton></div>
+          <div className="vault-intro"><Eyebrow>Inside the course</Eyebrow><h2>The Faceless Page<br /><em>Launch System.</em></h2><p>Ten PDF modules, each paired with a workbook, plus practical bonuses designed to help you build, grow, and monetize.</p></div>
+          <div className="vault-visual course-vault-visual"><img src={facelessPageLaunchVisual} alt="The Faceless Page Launch System course and included bonuses" /><div className="vault-visual__overlay"><span>RAREFOUND / COURSE</span><b>10<br /><small>modules + workbooks</small></b></div></div>
+          <div className="module-heading"><div><Eyebrow>Everything you get</Eyebrow><h2>10 modules.<br />10 workbooks.</h2></div><PrimaryButton>Access now</PrimaryButton></div>
           <div className="module-list">{modules.map((module) => <article className="module-row" key={module.no}><span className="module-num">{module.no}</span><div className="module-main"><small>{module.lessons}</small><h3>{module.name}</h3><p>{module.copy}</p></div><span className="module-plan">{module.plan}</span><ArrowUpRight size={18} /></article>)}</div>
         </section>
 
@@ -266,7 +225,7 @@ export default function Home() {
 
         <section id="faq" className="section-wrap faq-section"><div className="faq-header"><Eyebrow>FAQ</Eyebrow><h2>Questions<span>.</span></h2><p>Everything you need to know before you take the method.</p></div><div className="faq-list">{faqs.map(([question, answer], index) => <article className={openFaq === index ? "faq-item active" : "faq-item"} key={question}><button onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}><span className="faq-number">{String(index + 1).padStart(2, "0")}</span><b>{question}</b>{openFaq === index ? <Minus /> : <Plus />}</button><div className="faq-answer"><p>{answer}</p></div></article>)}</div></section>
 
-        <section id="final" className="section-wrap final-section"><DotGrid /><div className="final-content"><Eyebrow>Sell the shovels</Eyebrow><h2>You already have<br />the <em>method.</em></h2><p>The only thing left is the decision to use it.</p><PrimaryButton href="#pricing">Get the method</PrimaryButton><span>The funnel you just scrolled is the method in action.</span></div></section>
+        <section id="final" className="section-wrap final-section"><DotGrid /><div className="final-content"><Eyebrow>Build the page</Eyebrow><h2>You already have<br />the <em>system.</em></h2><p>The only thing left is the decision to use it.</p><PrimaryButton>Access now</PrimaryButton><span>The page you just scrolled is the system in action.</span></div></section>
       </main>
 
       <footer className="site-footer"><button onClick={scrollTop} className="footer-mark rarefound-logo-crop" aria-label="Back to top"><img src={rarefoundLogo} alt="" /></button><span>RAREFOUND (C) 2026</span><a href="mailto:support@example.com"><Mail size={14} /> Email</a><a href="#top">Legal</a></footer>
