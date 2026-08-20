@@ -24,3 +24,8 @@
 - [x] Reframe the pricing and course sections as one offer: The Faceless Page Launch System.
 - [x] Present the 10 PDF modules with workbooks and the stated bonuses, reserving the module imagery area for forthcoming cover pages.
 - [x] Verify checkout links, evidence visibility, and responsive layouts.
+
+## Visual Editor Follow-up
+
+- [x] Inspect the unresolved visual-editor target and remove the referenced section if it remains in the current page.
+- [x] Verify the corrected visual flow and save a new checkpoint.

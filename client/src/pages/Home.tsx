@@ -188,7 +188,6 @@ export default function Home() {
             <ProofCard type="CUSTOMER DM" title="First sale confirmed" detail="customer-reported proof shared with Rarefound" image={dmFirstSale} />
           </div>
           <div className="metrics-strip"><div><b>20.35M</b><span>views · September</span></div><div><b>30K</b><span>followers</span></div><div><b>339</b><span>orders · last 365 days</span></div><div><b>$6.5K</b><span>earnings · last 365 days</span></div></div>
-          <div className="dm-proof-section"><div><Eyebrow>Customer messages</Eyebrow><p>First-party customer conversations shared as proof of client wins, first sales, and audience growth.</p></div><div className="dm-gallery"><article><img src={dmFirstClient} alt="Customer message reporting their first client signed in two days" /><span>First client · two days</span></article><article><img src={dmFirstSale} alt="Customer message reporting a first sale" /><span>First sale · customer report</span></article><article><img src={dmViewsGrowth} alt="Customer message about receiving 68.5 thousand views" /><span>68.5K views · customer report</span></article></div></div>
         </section>
 
         <section id="pricing" className="section-wrap pricing-section">
