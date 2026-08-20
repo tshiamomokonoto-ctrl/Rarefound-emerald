@@ -49,3 +49,16 @@
 
 - [x] Remove the staggered mobile card offset to align both module columns.
 - [x] Verify the symmetric two-column mobile layout and save a checkpoint.
+
+## First-Sale Image Replacement Follow-up
+
+- [x] Inspect the stale visual-editor target and identify the current image it refers to.
+- [x] Preserve the intended image area for the user’s forthcoming first-sale proof image.
+- [ ] Verify the current state and save a checkpoint before the first-sale image is supplied.
+
+## Documented First-Sale Proof
+
+- [x] Move the supplied first-sale screenshot to managed static-asset storage.
+- [x] Replace the first-sale timeline visual with the documented $22.20 sale image.
+- [x] Update related proof labels to accurately identify the first documented sale.
+- [x] Verify the first-sale proof presentation on desktop and mobile.

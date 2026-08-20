@@ -30,6 +30,7 @@ const salesAnalyticsMonth = "/manus-storage/sales-analytics-month_5d6072b7.webp"
 const dmFirstClient = "/manus-storage/dm-first-client_eba049ce.jpg";
 const dmFirstSale = "/manus-storage/dm-first-sale_66ca802e.jpg";
 const dmViewsGrowth = "/manus-storage/dm-views-growth_5f5fd7fe.webp";
+const firstSaleProof = "/manus-storage/first-sale-22-20_fa03c56c.webp";
 
 const modules = [
   { no: "01", name: "Choose Your Profitable Direction", outcome: "Find the right niche", cover: "/manus-storage/module-01_a117f0d0.png" },
@@ -215,7 +216,7 @@ export default function Home() {
 
         <section className="section-wrap timeline-section">
           <div className="section-heading split-heading"><div><Eyebrow>In real time</Eyebrow><h2>This page is<br /><em>the proof.</em></h2></div><p>A faceless page growing an audience and turning attention into a documented commercial result. The system stays visible in the work itself.</p></div>
-          <div className="timeline-layout"><div className="timeline"><article><span>01</span><time>June 20</time><h3>First video posted</h3><p>The account starts from zero.</p></article><article><span>02</span><time>June 27</time><h3>First signal</h3><p>The loop begins to find attention.</p></article><article><span>03</span><time>June 28</time><h3>First sale</h3><p>Real action, not an abstract plan.</p></article></div><div className="timeline-visual"><div className="timeline-visual__orb" /><p>Operate in public.<br /><em>Let the process prove itself.</em></p><div><b>12</b><span>posts</span><b>8 days</b><span>to first sale</span></div></div></div>
+          <div className="timeline-layout"><div className="timeline"><article><span>01</span><time>June 20</time><h3>First video posted</h3><p>The account starts from zero.</p></article><article><span>02</span><time>June 27</time><h3>First signal</h3><p>The loop begins to find attention.</p></article><article><span>03</span><time>June 28</time><h3>First documented sale</h3><p>A $22.20 sale notification, captured from the order email.</p></article></div><div className="timeline-visual first-sale-timeline"><img className="first-sale-shot" src={firstSaleProof} alt="Documented first-sale order email showing a 22 dollar and 20 cent sale" /><div className="first-sale-timeline__shade" /><p>First documented sale.<br /><em>$22.20 / order received</em></p><div><b>$22.20</b><span>first sale</span><b>1</b><span>order</span></div></div></div>
         </section>
 
         <section id="modules" className="section-wrap vault-section">
