@@ -44,3 +44,8 @@
 - [x] Replace the Module 04 cover placeholder with the provided artwork.
 - [x] Display the course-library modules in a compact two-column collage on mobile.
 - [x] Verify the complete 10-cover library at desktop and mobile sizes.
+
+## Symmetric Mobile Module Layout
+
+- [x] Remove the staggered mobile card offset to align both module columns.
+- [x] Verify the symmetric two-column mobile layout and save a checkpoint.
