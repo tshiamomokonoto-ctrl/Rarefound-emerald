@@ -29,3 +29,11 @@
 
 - [x] Inspect the unresolved visual-editor target and remove the referenced section if it remains in the current page.
 - [x] Verify the corrected visual flow and save a new checkpoint.
+
+## Module Covers and Curriculum
+
+- [x] Move the provided Module 01, 02, 03, 05, 06, 07, 08, 09, and 10 cover art to managed static-asset storage.
+- [x] Replace generic module names and outcomes with the user-provided curriculum.
+- [x] Display the supplied module covers in a concise, responsive course-library gallery.
+- [x] Preserve a clear cover placeholder for Module 04 until its cover image is supplied.
+- [x] Verify the curriculum gallery on desktop and mobile.

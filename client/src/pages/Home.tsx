@@ -31,13 +31,18 @@ const dmFirstClient = "/manus-storage/dm-first-client_eba049ce.jpg";
 const dmFirstSale = "/manus-storage/dm-first-sale_66ca802e.jpg";
 const dmViewsGrowth = "/manus-storage/dm-views-growth_5f5fd7fe.webp";
 
-const modules = Array.from({ length: 10 }, (_, index) => ({
-  no: String(index + 1).padStart(2, "0"),
-  lessons: "PDF module + workbook",
-  name: `Module ${String(index + 1).padStart(2, "0")}`,
-  plan: "Faceless Page Launch System",
-  copy: "A focused course module with a companion workbook. Detailed cover pages will be added here as they are released.",
-}));
+const modules = [
+  { no: "01", name: "Choose Your Profitable Direction", outcome: "Find the right niche", cover: "/manus-storage/module-01_a117f0d0.png" },
+  { no: "02", name: "Build a Brand People Remember", outcome: "Build the page", cover: "/manus-storage/module-02_4b5499f4.png" },
+  { no: "03", name: "Content That Actually Grows", outcome: "Know what to post", cover: "/manus-storage/module-03_cb39dfa2.png" },
+  { no: "04", name: "The AI Content Creation System", outcome: "Create content faster" },
+  { no: "05", name: "Editing Like a Viral Creator", outcome: "Turn ideas into compelling content", cover: "/manus-storage/module-05_39812b2a.jpg" },
+  { no: "06", name: "The Growth System", outcome: "Grow the audience", cover: "/manus-storage/module-06_a0e58049.jpg" },
+  { no: "07", name: "Build Trust & Authority", outcome: "Turn followers into believers", cover: "/manus-storage/module-07_820b5e5e.jpg" },
+  { no: "08", name: "Monetize Your Audience", outcome: "Turn attention into income", cover: "/manus-storage/module-08_d792fa02.jpg" },
+  { no: "09", name: "Automate & Scale", outcome: "Build systems", cover: "/manus-storage/module-09_5dc2b9fb.jpg" },
+  { no: "10", name: "Build a Real Business", outcome: "Turn the page into an asset", cover: "/manus-storage/module-10_48c9c08f.jpg" },
+];
 
 const faqs = [
   [
@@ -217,7 +222,7 @@ export default function Home() {
           <div className="vault-intro"><Eyebrow>Inside the course</Eyebrow><h2>The Faceless Page<br /><em>Launch System.</em></h2><p>Ten PDF modules, each paired with a workbook, plus practical bonuses designed to help you build, grow, and monetize.</p></div>
           <div className="vault-visual course-vault-visual"><img src={facelessPageLaunchVisual} alt="The Faceless Page Launch System course and included bonuses" /><div className="vault-visual__overlay"><span>RAREFOUND / COURSE</span><b>10<br /><small>modules + workbooks</small></b></div></div>
           <div className="module-heading"><div><Eyebrow>Everything you get</Eyebrow><h2>10 modules.<br />10 workbooks.</h2></div><PrimaryButton>Access now</PrimaryButton></div>
-          <div className="module-list">{modules.map((module) => <article className="module-row" key={module.no}><span className="module-num">{module.no}</span><div className="module-main"><small>{module.lessons}</small><h3>{module.name}</h3><p>{module.copy}</p></div><span className="module-plan">{module.plan}</span><ArrowUpRight size={18} /></article>)}</div>
+          <div className="module-list course-library">{modules.map((module) => <article className="module-row course-module-card" key={module.no}><div className="module-cover">{module.cover ? <img src={module.cover} alt={`Cover for Module ${module.no}: ${module.name}`} /> : <div className="module-cover-placeholder"><span>Module {module.no}</span><b>Cover coming<br />soon</b><small>The AI Content<br />Creation System</small></div>}</div><div className="module-card-content"><span className="module-num">Module {module.no}</span><div className="module-main"><small>PDF module + workbook</small><h3>{module.name}</h3><p>{module.outcome}</p></div><span className="module-plan">Faceless Page Launch System</span></div></article>)}</div>
         </section>
 
         <section className="section-wrap contrast-section"><div className="contrast-title"><Eyebrow>Why this isn't another course</Eyebrow><h2>Not a promise.<br /><em>A mechanism.</em></h2></div><div className="contrast-list">{[["Not theory","a sellable vault"],["Not gurus hiding the method","the method out loud"],["Not a subscription","one payment, lifetime"],["Not stale screenshots","the funnel you are inside right now"],["Not 'make money' hype","the exact system"]].map(([a,b], i) => <div className="contrast-row" key={a}><span>0{i + 1}</span><b>{a}</b><ArrowRight size={18} /><strong>{b}</strong></div>)}</div><p className="contrast-footnote">If you want money while you do nothing, don’t buy this. It will not work. This is for the people willing to post, create, adjust, and build a useful thing.</p></section>
