@@ -68,3 +68,9 @@
 - [x] Inspect the editor-applied inline spacing changes for duplicate props and unintended nested spacing.
 - [x] Retain the requested compact 20px section spacing in clean, valid markup.
 - [x] Verify the compact layout and save a correction checkpoint.
+
+## Mobile Hero Alignment
+
+- [x] Inspect the unresolved visual-editor hero-copy target.
+- [x] Center-align the hero wording at mobile widths only.
+- [x] Verify the mobile hero alignment and save a checkpoint.
