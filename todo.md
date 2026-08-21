@@ -120,4 +120,4 @@
 - [x] Make the hero visual fill the full section and add subtle reduced-motion-safe motion.
 - [x] Verify the animated hero background on desktop and mobile.
 - [x] Confirm the full-section hero background CSS is applied successfully and remains reduced-motion-safe.
-- [ ] Save the animated hero-background checkpoint.
+- [x] Save the animated hero-background checkpoint.
