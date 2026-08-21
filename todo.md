@@ -74,3 +74,9 @@
 - [x] Inspect the unresolved visual-editor hero-copy target.
 - [x] Center-align the hero wording at mobile widths only.
 - [x] Verify the mobile hero alignment and save a checkpoint.
+
+## Mobile Proof Grid
+
+- [x] Inspect the stale proof-section target and current mobile proof-card layout.
+- [x] Present the proof-card grid in two columns on mobile.
+- [x] Verify the two-column proof layout and save a checkpoint.
