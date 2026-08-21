@@ -106,7 +106,7 @@
 - [x] Evaluate managed storage for Vercel assets; use optimized public files instead because the external deployment needs directly served paths.
 - [x] Remove oversized tracked local assets and build artifacts.
 - [x] Verify the Vercel-ready build after optimizing the public image bundle.
-- [ ] Save the deferred checkpoint for the Vercel image-restoration update.
+- [x] Save the deferred checkpoint for the Vercel image-restoration update.
 
 ## Vercel Asset Optimization
 
