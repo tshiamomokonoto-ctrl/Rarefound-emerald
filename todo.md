@@ -113,3 +113,11 @@
 - [x] Optimize each public image above 1 MB while preserving the page’s visual content.
 - [x] Confirm all bundled public images are below the checkpoint threshold.
 - [x] Rebuild and visually verify the optimized Vercel image bundle.
+
+## Animated Hero Background
+
+- [x] Inspect the unresolved hero visual target and current background treatment.
+- [x] Make the hero visual fill the full section and add subtle reduced-motion-safe motion.
+- [x] Verify the animated hero background on desktop and mobile.
+- [x] Confirm the full-section hero background CSS is applied successfully and remains reduced-motion-safe.
+- [ ] Save the animated hero-background checkpoint.
