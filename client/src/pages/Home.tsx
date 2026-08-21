@@ -19,30 +19,30 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const heroImage = "/manus-storage/method-hero-grid_e95423d3.png";
-const rarefoundLogo = "/manus-storage/rarefound-logo_05856966.png";
+const heroImage = "/images/method-hero-grid.webp";
+const rarefoundLogo = "/images/rarefound-logo.webp";
 const checkoutUrl = "https://shop.beacons.ai/rarefound/032671fb-9aca-4ff1-b167-450ba7c7f1c0";
-const facelessPageLaunchVisual = "/manus-storage/faceless-page-launch-system_76e323e0.webp";
-const viewsSeptember = "/manus-storage/views-september_89729714.webp";
-const followersProfile = "/manus-storage/followers-profile_12f165d5.webp";
-const salesAnalyticsAnnual = "/manus-storage/sales-analytics-annual_4f8c5275.webp";
-const salesAnalyticsMonth = "/manus-storage/sales-analytics-month_5d6072b7.webp";
-const dmFirstClient = "/manus-storage/dm-first-client_eba049ce.jpg";
-const dmFirstSale = "/manus-storage/dm-first-sale_66ca802e.jpg";
-const dmViewsGrowth = "/manus-storage/dm-views-growth_5f5fd7fe.webp";
-const firstSaleProof = "/manus-storage/first-sale-22-20_fa03c56c.webp";
+const facelessPageLaunchVisual = "/images/faceless-page-launch-system.webp";
+const viewsSeptember = "/images/proof/views-september.webp";
+const followersProfile = "/images/proof/followers-profile.webp";
+const salesAnalyticsAnnual = "/images/proof/sales-analytics-annual.webp";
+const salesAnalyticsMonth = "/images/proof/sales-analytics-month.webp";
+const dmFirstClient = "/images/proof/dm-first-client.jpg";
+const dmFirstSale = "/images/proof/dm-first-sale.jpg";
+const dmViewsGrowth = "/images/proof/dm-views-growth.webp";
+const firstSaleProof = "/images/proof/first-sale-22-20.webp";
 
 const modules = [
-  { no: "01", name: "Choose Your Profitable Direction", outcome: "Find the right niche", cover: "/manus-storage/module-01_a117f0d0.png" },
-  { no: "02", name: "Build a Brand People Remember", outcome: "Build the page", cover: "/manus-storage/module-02_4b5499f4.png" },
-  { no: "03", name: "Content That Actually Grows", outcome: "Know what to post", cover: "/manus-storage/module-03_cb39dfa2.png" },
-  { no: "04", name: "The AI Content Creation System", outcome: "Create content faster", cover: "/manus-storage/module-04_00233816.png" },
-  { no: "05", name: "Editing Like a Viral Creator", outcome: "Turn ideas into compelling content", cover: "/manus-storage/module-05_39812b2a.jpg" },
-  { no: "06", name: "The Growth System", outcome: "Grow the audience", cover: "/manus-storage/module-06_a0e58049.jpg" },
-  { no: "07", name: "Build Trust & Authority", outcome: "Turn followers into believers", cover: "/manus-storage/module-07_820b5e5e.jpg" },
-  { no: "08", name: "Monetize Your Audience", outcome: "Turn attention into income", cover: "/manus-storage/module-08_d792fa02.jpg" },
-  { no: "09", name: "Automate & Scale", outcome: "Build systems", cover: "/manus-storage/module-09_5dc2b9fb.jpg" },
-  { no: "10", name: "Build a Real Business", outcome: "Turn the page into an asset", cover: "/manus-storage/module-10_48c9c08f.jpg" },
+  { no: "01", name: "Choose Your Profitable Direction", outcome: "Find the right niche", cover: "/images/modules/module-01.webp" },
+  { no: "02", name: "Build a Brand People Remember", outcome: "Build the page", cover: "/images/modules/module-02.png" },
+  { no: "03", name: "Content That Actually Grows", outcome: "Know what to post", cover: "/images/modules/module-03.webp" },
+  { no: "04", name: "The AI Content Creation System", outcome: "Create content faster", cover: "/images/modules/module-04.webp" },
+  { no: "05", name: "Editing Like a Viral Creator", outcome: "Turn ideas into compelling content", cover: "/images/modules/module-05.jpg" },
+  { no: "06", name: "The Growth System", outcome: "Grow the audience", cover: "/images/modules/module-06.jpg" },
+  { no: "07", name: "Build Trust & Authority", outcome: "Turn followers into believers", cover: "/images/modules/module-07.jpg" },
+  { no: "08", name: "Monetize Your Audience", outcome: "Turn attention into income", cover: "/images/modules/module-08.jpg" },
+  { no: "09", name: "Automate & Scale", outcome: "Build systems", cover: "/images/modules/module-09.jpg" },
+  { no: "10", name: "Build a Real Business", outcome: "Turn the page into an asset", cover: "/images/modules/module-10.webp" },
 ];
 
 const faqs = [

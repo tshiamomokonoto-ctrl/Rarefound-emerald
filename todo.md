@@ -54,7 +54,7 @@
 
 - [x] Inspect the stale visual-editor target and identify the current image it refers to.
 - [x] Preserve the intended image area for the user’s forthcoming first-sale proof image.
-- [ ] Verify the current state and save a checkpoint before the first-sale image is supplied.
+- [x] Verify the current state after the first-sale image was supplied and integrated.
 
 ## Documented First-Sale Proof
 
@@ -80,3 +80,36 @@
 - [x] Inspect the stale proof-section target and current mobile proof-card layout.
 - [x] Present the proof-card grid in two columns on mobile.
 - [x] Verify the two-column proof layout and save a checkpoint.
+
+## Vercel Deployment Diagnosis
+
+- [x] Confirm the project’s build command and static output directory.
+- [x] Provide the corresponding Vercel project settings and likely fix.
+- [x] Request and inspect the deployment URL after the initial Vercel configuration did not resolve the issue.
+
+## Live Vercel Deployment Inspection
+
+- [x] Inspect the supplied deployment URL and identify its rendered state.
+- [x] Determine whether the live failure is caused by output configuration, missing assets, or runtime behavior.
+- [x] Provide the exact next correction for the Vercel deployment.
+
+## Vercel Image Restoration
+
+- [x] Identify each Manus-managed image reference currently used by the page.
+- [x] Copy the complete image set into a Vercel-served public directory.
+- [x] Replace Manus-only image references with public deployment asset paths.
+- [x] Build and verify the Vercel-ready image bundle before redeployment.
+
+## Managed Storage Migration
+
+- [x] Enable managed file storage for the project.
+- [x] Evaluate managed storage for Vercel assets; use optimized public files instead because the external deployment needs directly served paths.
+- [x] Remove oversized tracked local assets and build artifacts.
+- [x] Verify the Vercel-ready build after optimizing the public image bundle.
+- [ ] Save the deferred checkpoint for the Vercel image-restoration update.
+
+## Vercel Asset Optimization
+
+- [x] Optimize each public image above 1 MB while preserving the page’s visual content.
+- [x] Confirm all bundled public images are below the checkpoint threshold.
+- [x] Rebuild and visually verify the optimized Vercel image bundle.
