@@ -4,10 +4,11 @@ import "../rarefound-vault.css";
 
 const rarefoundLogo = "/images/rarefound-logo.webp";
 const checkoutUrl = "https://shop.beacons.ai/rarefound/032671fb-9aca-4ff1-b167-450ba7c7f1c0";
-const graphImage = "/images/vault/vault-graph.webp";
-const dashboardImage = "/images/vault/vault-dashboard.webp";
-const noteImage = "/images/vault/vault-note.webp";
-const pdfImage = "/images/vault/vault-pdf.webp";
+const graphImage = "/images/Vault/website v1 .png";
+const researchImage = "/images/Vault/website V2 .png";
+const monetizationImage = "/images/Vault/website V3 .png";
+const moduleImage = "/images/Vault/website V4 .png";
+const dashboardImage = "/images/Vault/website V5.png";
 const followersProfile = "/images/proof/followers-profile.webp";
 const salesAnalyticsAnnual = "/images/proof/sales-analytics-annual.webp";
 
@@ -82,11 +83,11 @@ export default function Home() {
 
         <section id="inside" className="vault-section">
           <div className="vault-heading"><div><Eyebrow>More than another course login</Eyebrow><h2>Your business education.<br /><em>Built as a system.</em></h2></div><p>Rarefound brings the course, workbooks, PDFs, resources and progress into one connected Obsidian vault — so you can learn and build in the same place.</p></div>
-          <div className="vault-showcase"><div className="vault-showcase-media"><img src={dashboardImage} alt="Rarefound Obsidian course dashboard with module navigation and progress tracking" /></div><div className="vault-showcase-copy"><span className="vault-index">01 / RAREFOUND HQ</span><h3>Open the vault.<br />Know what comes next.</h3><p>The dashboard gives you one starting point for the 10-module roadmap, workbook, bonuses and progress. No hunting through downloads. No forgotten course tab.</p></div></div>
+          <div className="vault-showcase"><div className="vault-showcase-media"><img src={dashboardImage} alt="Rarefound Obsidian HQ with roadmap and module navigation" /></div><div className="vault-showcase-copy"><span className="vault-index">01 / RAREFOUND HQ</span><h3>Open the vault.<br />Know what comes next.</h3><p>The dashboard gives you one starting point for the 10-module roadmap, workbook, bonuses and progress. No hunting through downloads. No forgotten course tab.</p></div></div>
           <div className="vault-gallery">
-            <article><img src={noteImage} alt="Rarefound lesson note inside Obsidian" /><div><strong>Learn inside connected notes</strong><small>Move through lessons while keeping the context, references and related ideas around them.</small></div></article>
-            <article><img src={pdfImage} alt="Rarefound course PDF embedded inside Obsidian" /><div><strong>Designed PDFs are included</strong><small>Use the polished course PDFs when you want a linear read, without leaving the vault.</small></div></article>
-            <article><img src={graphImage} alt="Rarefound Obsidian graph view" /><div><strong>See the system, not just files</strong><small>Graph view turns the curriculum into a visual map of ideas, lessons and business stages.</small></div></article>
+            <article><img src={moduleImage} alt="Rarefound Module 01 Foundation home inside Obsidian" /><div><strong>Follow a structured module path</strong><small>Each module gives you a clear outcome, lessons, workbook and build sequence inside the same vault.</small></div></article>
+            <article><img src={researchImage} alt="Rarefound Market Research Board inside Obsidian" /><div><strong>Build inside practical tools</strong><small>Use connected boards, checklists and working notes instead of passively consuming lessons.</small></div></article>
+            <article><img src={monetizationImage} alt="Rarefound Monetization Map inside Obsidian" /><div><strong>Turn research into decisions</strong><small>Map offers, pricing, problems and commercial signals inside the same operating system.</small></div></article>
           </div>
         </section>
 
