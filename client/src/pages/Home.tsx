@@ -4,6 +4,7 @@ import "../rarefound-vault.css";
 
 const rarefoundLogo = "/images/rarefound-logo.webp";
 const checkoutUrl = "https://shop.beacons.ai/rarefound/032671fb-9aca-4ff1-b167-450ba7c7f1c0";
+const productImage = "/images/Vault/obsidian vault emerald green .png";
 const graphImage = "/images/Vault/website v1 .png";
 const researchImage = "/images/Vault/website V2 .png";
 const monetizationImage = "/images/Vault/website V3 .png";
@@ -76,7 +77,7 @@ export default function Home() {
               <CTA />
               <p className="vault-micro">One payment · instant access · lifetime access to the vault you purchase</p>
             </div>
-            <div className="vault-hero-visual"><img src={graphImage} alt="Rarefound Obsidian vault graph showing connected course lessons and modules" /><span className="vault-visual-tag">10 modules · connected lessons · one system</span></div>
+            <div className="vault-hero-visual vault-product-hero"><img src={productImage} alt="Rarefound Obsidian Business Vault product system showing modules, dashboards, AI prompts, templates and connected lessons" /><span className="vault-visual-tag">10 modules · AI workflows · templates · lifetime access</span></div>
           </div>
           <div className="vault-strip"><span>10 business modules</span><span>Connected lessons</span><span>Course PDFs</span><span>Workbooks + bonuses</span><span>Built in Obsidian</span></div>
         </section>
